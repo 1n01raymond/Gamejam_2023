@@ -7,6 +7,7 @@ public class Cut : MonoBehaviour
    public Transform left;
    public Transform right;
    List<SpriteSlicer2DSliceInfo> m_SlicedSpriteInfo = new List<SpriteSlicer2DSliceInfo>();
+   public GameObject cutFX;
 
    public void OnCut()
    {
@@ -27,7 +28,8 @@ public class Cut : MonoBehaviour
         }
 
         // destroy self after cut after 3 sec
-        Destroy(gameObject, 3f);
+        //Destroy(gameObject, 3f);
+        cutFX.SetActive(true);
    }
 
    public void Update(){
